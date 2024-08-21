@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website : Home</title>
+    <link rel="icon" type="image/x-icon" href="./images/logo/favicon.ico">
+    <link rel="stylesheet"  type="text/css" href="./vendors/bootstrap/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+    <script src="./vendors/jquery/popper.min.js"></script>
+    <script src="./vendors/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="./vendors/jquery/jquery.min.js"></script>
+    <link rel="stylesheet"  type="text/css" href="./css/style.css">
+    <script src="./js/script.js"></script>
+
+    <style>
+        /* Custom styles for dark mode */
+        body.dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .navbar-light.dark-mode {
+            background-color: #1f1f1f;
+        }
+
+        .bg-light.dark-mode {
+            background-color: #1f1f1f !important;
+        }
+
+        .text-primary.dark-mode {
+            color: #bb86fc !important;
+        }
+
+        .btn-outline-secondary.dark-mode {
+            color: #ffffff;
+            border-color: #bb86fc;
+        }
+
+        .btn-outline-secondary.dark-mode:hover {
+            background-color: #bb86fc;
+        }
+
+        .carousel-inner img {
+            filter: brightness(0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar sticky-top  navbar-expand-lg navbar-light bg-white pt-3 pb-3 ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href=""> <div class="logo"><img class="img-fluid" src="./images/logo/logo_org.png" alt="logo"></div></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto ">
+              <li class="nav-item">
+                <a class="nav-link mx-2 active" aria-current="page" href="index.php">Home</a>
+              </li>
+              <!-- ... other nav items ... -->
+
+              <!-- Dark Mode Toggle Button -->
+              <div class="navbar-nav ms-auto d-flex align-items-center">
+                  <button id="darkModeToggle" class="btn btn-outline-secondary">
+                    <i class="bi bi-moon"></i> Dark Mode
+                  </button>
+              </div>
+
+              <!-- Social Media Icons -->
+              <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
+                <li class="nav-item mx-2">
+                  <a class="nav-link text-dark h5" href="" target="blank"><i class="bi bi-facebook"></i></a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link text-dark h5" href="" target="blank"><i class="bi bi-twitter"></i></a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link text-dark h5" href="" target="blank"><i class="bi bi-instagram"></i></a>
+                </li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+<!-- ... rest of your content ... -->
+
+<script>
+    $(document).ready(function(){
+        // Check if dark mode is enabled
+        if(localStorage.getItem('dark-mode') === 'enabled') {
+            enableDarkMode();
+        }
+
+        // Toggle dark mode on button click
+        $('#darkModeToggle').click(function() {
+            if(localStorage.getItem('dark-mode') !== 'enabled') {
+                enableDarkMode();
+            } else {
+                disableDarkMode();
+            }
+        });
+
+        function enableDarkMode() {
+            $('body').addClass('dark-mode');
+            $('.navbar').addClass('dark-mode');
+            $('.bg-light').addClass('dark-mode');
+            $('.text-primary').addClass('dark-mode');
+            $('.btn-outline-secondary').addClass('dark-mode');
+            localStorage.setItem('dark-mode', 'enabled');
+            $('#darkModeToggle').html('<i class="bi bi-sun"></i> Light Mode');
+        }
+
+        function disableDarkMode() {
+            $('body').removeClass('dark-mode');
+            $('.navbar').removeClass('dark-mode');
+            $('.bg-light').removeClass('dark-mode');
+            $('.text-primary').removeClass('dark-mode');
+            $('.btn-outline-secondary').removeClass('dark-mode');
+            localStorage.setItem('dark-mode', 'disabled');
+            $('#darkModeToggle').html('<i class="bi bi-moon"></i> Dark Mode');
+        }
+    });
+</script>
+</body>
+</html>

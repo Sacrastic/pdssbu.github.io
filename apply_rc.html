@@ -1,0 +1,262 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website : Apply RC</title>
+    <link rel="icon" type="image/x-icon" href="./images/logo/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" type="text/css" href="./vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="./vendors/jquery/jquery.min.js"></script>
+    <script src="./vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+   <!--Nav Bar-->
+   <nav class="navbar sticky-top  navbar-expand-lg navbar-light bg-white pt-3 pb-3 ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href=""> <div class="logo"><img class="img-fluid" src="./images/logo/logo_org.png" alt="logo"></div></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto ">
+          <li class="nav-item">
+            <a class="nav-link mx-2 active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="about.html">About PDS</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Ration Card Services
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="apply_rc.html">Apply for Ration Card</a></li>
+              <li><a class="dropdown-item" href="check_status.html">Check Ration Card Status</a></li>
+              <li><a class="dropdown-item" href="update_rc.html">Update Ration Card</a></li>
+              <li><a class="dropdown-item" href="download_rc.html">Download Ration Card</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Beneficiary Information
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="eligibility_info.html">Eligibility Criteria</a></li>
+              <li><a class="dropdown-item" href="search_benificiary.html">Search Beneficiary</a></li>
+              <li><a class="dropdown-item" href="grievance_redressal.html">Grievance Redressal</a></li>
+             
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             Login/Sign Up
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            
+              <li><a class="dropdown-item" href="beneficiary_login.html">Beneficiary Login</a></li>
+              <li><a class="dropdown-item" href="admin_login.html">Admin Login</a></li>
+              
+            </ul>
+          </li>
+
+        </ul>
+
+<!-- Dark Mode Toggle Button -->
+<div class="navbar-nav ms-auto d-flex align-items-center">
+<button id="darkModeToggle" class="btn btn-outline-secondary">
+<i class="bi bi-moon"></i> Dark Mode
+</button>
+</div>
+
+        <!-- Facebook Section-->
+        <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
+          <li class="nav-item mx-2">
+            <a class="nav-link text-dark h5" href="" target="blank"><i class="bi bi-facebook"></i></a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link text-dark h5" href="" target="blank"><i class="bi bi-twitter"></i></a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link text-dark h5" href="" target="blank"><i class="bi bi-instagram"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+   <!--Nav Bar-->
+
+    <!-- Hero Section -->
+    <section class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Apply for a Ration Card</h1>
+            <p class="lead">Ensuring access to essential commodities through the Public Distribution System</p>
+        </div>
+    </section>
+
+    <!-- Application Form Section -->
+    <section class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="form-container p-4 shadow-sm rounded bg-white">
+                    <h2 class="text-center text-primary mb-4">Ration Card Application Form</h2>
+                    <form id="multiStepForm" action="submit_application.php" method="post" enctype="multipart/form-data">
+    
+                        <!-- Step 1: Personal Information -->
+                        <div class="form-step">
+                            <h4 class="mb-3 text-secondary">Personal Information</h4>
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="mobileNumber" class="form-label">Mobile Number</label>
+                                <input type="tel" class="form-control" id="mobileNumber" placeholder="Enter your mobile number" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email address" required>
+                            </div>
+                        </div>
+    
+                        <!-- Step 2: Address Information -->
+                        <div class="form-step d-none">
+                            <h4 class="mb-3 text-secondary">Address Information</h4>
+                            <div class="mb-3">
+                                <label for="address" class="form-label">Residential Address</label>
+                                <textarea class="form-control" id="address" rows="3" placeholder="Enter your residential address" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="state" class="form-label">State</label>
+                                <select class="form-select" id="state" required>
+                                    <option selected disabled value="">Choose your state</option>
+                                    <option value="State1">State 1</option>
+                                    <option value="State2">State 2</option>
+                                    <option value="State3">State 3</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="district" class="form-label">District</label>
+                                <select class="form-select" id="district" required>
+                                    <option selected disabled value="">Choose your district</option>
+                                    <option value="District1">District 1</option>
+                                    <option value="District2">District 2</option>
+                                    <option value="District3">District 3</option>
+                                </select>
+                            </div>
+                        </div>
+    
+                        <!-- Step 3: Ration Card Details -->
+                        <div class="form-step d-none">
+                            <h4 class="mb-3 text-secondary">Ration Card Details</h4>
+                            <div class="mb-3">
+                                <label for="rationCardType" class="form-label">Type of Ration Card</label>
+                                <select class="form-select" id="rationCardType" required>
+                                    <option selected disabled value="">Choose ration card type</option>
+                                    <option value="BPL">Below Poverty Line (BPL)</option>
+                                    <option value="APL">Above Poverty Line (APL)</option>
+                                    <option value="AAY">Antyodaya Anna Yojana (AAY)</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="incomeProof" class="form-label">Upload Income Proof</label>
+                                <input class="form-control" type="file" id="incomeProof" required>
+                            </div>
+                        </div>
+    
+                        <!-- Step 4: Upload Documents -->
+                        <div class="form-step d-none">
+                            <h4 class="mb-3 text-secondary">Upload Documents</h4>
+                            <div class="mb-3">
+                                <label for="photo" class="form-label">Upload Passport Size Photo</label>
+                                <input class="form-control" type="file" id="photo" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="idProof" class="form-label">Upload ID Proof</label>
+                                <input class="form-control" type="file" id="idProof" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="addressProof" class="form-label">Upload Address Proof</label>
+                                <input class="form-control" type="file" id="addressProof" required>
+                            </div>
+                        </div>
+    
+                        <!-- Step 5: Account Information and CAPTCHA -->
+                    
+<!-- Step 5: Account Information, CAPTCHA, and Submission -->
+<!-- Final Step: Username and Password -->
+<div class="form-step d-none">
+    <h4 class="mb-3 text-secondary">Account Information</h4>
+    <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" class="form-control" id="username" placeholder="Choose a username" required>
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Choose a password" required>
+    </div>
+    <div class="mb-3">
+        <label for="confirmPassword" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
+    </div>
+  
+    <!-- CAPTCHA Section -->
+    <div class="mb-3">
+        <label for="captcha" class="form-label">CAPTCHA Code</label>
+        <div class="d-flex align-items-center">
+            <input type="text" class="form-control me-3" id="submit" placeholder="Enter CAPTCHA" required>
+            <div id="image" selectable="False" class="form-control text-center"></div>
+            <div class="inline" onclick="generate()" style="cursor: pointer;">
+                <i class="bi bi-arrow-clockwise"></i>
+            </div>
+            
+            
+        </div>
+    </div>
+    <p id="key" class="text-danger mt-2"></p>
+
+    <!-- Terms & Conditions -->
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="terms" required>
+        <label class="form-check-label" for="terms">I have read and agree to the <a href="#" target="_blank">Terms & Conditions</a></label>
+    </div>
+
+    <!-- Submit Button -->
+    
+</div>
+
+    
+                        <!-- Navigation Buttons -->
+                       <!-- Navigation Buttons -->
+<div class="d-flex justify-content-between mt-4">
+    <button type="button" id="prevBtn" class="btn btn-outline-secondary prev-btn" onclick="navigateForm(-1)">Previous</button>
+    <button type="button" id="nextBtn" class="btn btn-primary next-btn" onclick="navigateForm(1)">Next</button>
+</div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0">&copy; 2024 Public Distribution System. All rights reserved.</p>
+            <p class="mb-0">For support, contact us at <a href="mailto:support@pds.gov.in" class="text-white">support@pds.gov.in</a></p>
+            <div class="mt-2">
+                <a href="#" class="text-white me-3"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="text-white me-3"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="text-white"><i class="fa fa-instagram"></i></a>
+            </div>
+     
+<script src="./js/script.js"></script>
+</body>
+</html>

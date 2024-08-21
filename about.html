@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website : Home</title>
+    <link rel="icon" type="image/x-icon" href="./images/logo/favicon.ico">
+    <link rel="stylesheet"  type="text/css" href="./vendors/bootstrap/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+    <script src="./vendors/jquery/popper.min.js"></script>
+    <script src="./vendors/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="./vendors/jquery/jquery.min.js"></script>
+    <link rel="stylesheet"  type="text/css" href="./css/style.css">
+    
+</head>
+<body>
+
+    <nav class="navbar sticky-top  navbar-expand-lg navbar-light bg-white pt-3 pb-3 ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href=""> <div class="logo"><img class="img-fluid" src="./images/logo/logo_org.png" alt="logo"></div></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto ">
+              <li class="nav-item">
+                <a class="nav-link mx-2 active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2" href="about.html">About PDS</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Ration Card Services
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="apply_rc.html">Apply for Ration Card</a></li>
+                  <li><a class="dropdown-item" href="check_status.html">Check Ration Card Status</a></li>
+                  <li><a class="dropdown-item" href="update_rc.html">Update Ration Card</a></li>
+                  <li><a class="dropdown-item" href="download_rc.html">Download Ration Card</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Beneficiary Information
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="eligibility_info.html">Eligibility Criteria</a></li>
+                  <li><a class="dropdown-item" href="search_benificiary.html">Search Beneficiary</a></li>
+                  <li><a class="dropdown-item" href="grievance_redressal.html">Grievance Redressal</a></li>
+                 
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Login/Sign Up
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                
+                  <li><a class="dropdown-item" href="beneficiary_login.html">Beneficiary Login</a></li>
+                  <li><a class="dropdown-item" href="admin_login.html">Admin Login</a></li>
+                  
+                </ul>
+              </li>
+
+            </ul>
+
+<!-- Dark Mode Toggle Button -->
+<div class="navbar-nav ms-auto d-flex align-items-center">
+  <button id="darkModeToggle" class="btn btn-outline-secondary">
+    <i class="bi bi-moon"></i> Dark Mode
+  </button>
+</div>
+
+            <!-- Facebook Section-->
+            <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
+              <li class="nav-item mx-2">
+                <a class="nav-link text-dark h5" href="" target="blank"><i class="bi bi-facebook"></i></a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-dark h5" href="" target="blank"><i class="bi bi-twitter"></i></a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-dark h5" href="" target="blank"><i class="bi bi-instagram"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+       <!--Nav Bar-->
+
+
+      <!-- Hero Section -->
+      <section class="bg-primary text-white text-center py-5 position-relative">
+        <div class="container d-flex align-items-center justify-content-center" style="min-height: 300px;">
+            <div class="row w-100">
+                <div class="col-lg-6 text-lg-start text-center">
+                    <div class="typewriter">
+                    <h1 class="display-4">Public Distribution System</h1>
+               
+                    <p class="lead">Ensuring food security for all citizens of India.</p>
+                </div>
+                </div>
+                <div class="col-lg-6">
+                    <div id="pdsSlideshow" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="images/Slideshow/img1.jpg" class="d-block w-100 rounded" alt="Slide 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/Slideshow/img2.jpg" class="d-block w-100 rounded" alt="Slide 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/Slideshow/img3.jpg" class="d-block w-100 rounded" alt="Slide 3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#pdsSlideshow" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#pdsSlideshow" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background-image: url('images/background.jpg'); filter: blur(8px); opacity: 0.5; z-index: -1;"></div>
+    </section>
+
+  <!-- Overview Section -->
+  <section class="py-5">
+      <div class="container">
+          <h2 class="text-center mb-4">Overview</h2>
+          <p class="text-center">The Public Distribution System (PDS) is a nationwide food security system in India that distributes subsidized food and non-food items to India's poor. Established by the Government of India under the Ministry of Consumer Affairs, Food, and Public Distribution, PDS is a vital component of the country's safety net against hunger.</p>
+      </div>
+  </section>
+
+  <!-- History Section -->
+  <section class="bg-light py-5">
+      <div class="container">
+          <h2 class="text-center mb-4">History of Public Distribution</h2>
+          <div class="row">
+              <div class="col-md-6">
+                <img src="./images/about us/pds1960.jpg" style="width: 100%;height: auto;" alt="PDS1960">
+                  <h4 class="text-primary fs-5 text-center">PDS in 1960s</h4>
+                  <p>
+                      The public distribution of essential commodities was in existence in the country during the inter-war period. However, PDS, with its focus on the distribution of food grains in urban scarcity areas, had emanated from the critical food shortages of the 1960s. It contributed to containing food prices and ensured access to food for urban consumers. In the aftermath of the Green Revolution, PDS's outreach extended to tribal blocks and areas of high poverty in the 1970s and 1980s.
+                  </p>
+              </div>
+              <div class="col-md-6">
+                <img src="./images/about us/rpds.jpg" style="width: 100%;height: auto;" alt="RPDS">
+                  <h4 class="text-primary fs-5 text-center">Revamped Public Distribution System (RPDS)</h4>
+                  <p>
+                      Launched in June 1992, RPDS aimed to strengthen and streamline the PDS, focusing on far-flung, hilly, and remote areas. It covered 1775 blocks where specific programs like the Drought Prone Area Programme (DPAP) and Integrated Tribal Development Projects (ITDP) were implemented.
+                  </p>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-6">
+                <img src="./images/about us/tpds.jpg" style="width: 100%;height: auto;" alt="TPDS">
+                  <h4 class="text-primary fs-5 text-center">Targeted Public Distribution System (TPDS)</h4>
+                  <p>
+                      Introduced in June 1997, TPDS aimed at providing food grains to the poor at subsidized prices. The scheme targeted 6 crore poor families, providing 20 kg of food grains per family per month. The number of Below Poverty Line (BPL) families was later increased, and the scheme was further enhanced to provide greater benefits.
+                  </p>
+              </div>
+              
+              <div class="col-md-6">
+                <img src="./images/about us/AAY.png" style="width: 100%;height: auto;" alt="AAY">
+                  <h4 class="text-primary fs-5 text-center">Antyodaya Anna Yojana (AAY)</h4>
+                  <p>
+                      Launched in December 2000, AAY aimed to reduce hunger among the poorest segments of the BPL population by providing highly subsidized food grains. Initially covering one crore families, the scheme was later expanded to provide 35 kg of food grains per family per month.
+                      <a href="https://en.wikipedia.org/wiki/Public_Distribution_System_(India)">read more..</a>
+                  </p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="py-5">
+      <div class="container">
+          <h2 class="text-center mb-4">Our Mission</h2>
+          <p class="text-center">To ensure food security and reduce hunger by distributing essential commodities to the most vulnerable sections of society at subsidized prices.</p>
+      </div>
+  </section>
+
+  <!-- Vision Section -->
+  <section class="bg-light py-5">
+      <div class="container">
+          <h2 class="text-center mb-4">Our Vision</h2>
+          <p class="text-center">To create a hunger-free India where every citizen has access to nutritious food, enabling them to lead a healthy and productive life.</p>
+      </div>
+  </section>
+
+  <!-- Objectives Section -->
+  <section class="py-5">
+      <div class="container">
+          <h2 class="text-center mb-4">Our Objectives</h2>
+          <div class="row">
+              <div class="col-md-4">
+                  <div class="card text-center">
+                      <div class="card-body">
+                          <h5 class="card-title">Ensure Food Security</h5>
+                          <p class="card-text">Provide essential food grains and other commodities to the economically vulnerable sections of society at affordable prices.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="card text-center">
+                      <div class="card-body">
+                          <h5 class="card-title">Reduce Hunger</h5>
+                          <p class="card-text">Alleviate hunger and malnutrition by providing adequate and nutritious food to all, especially during times of crisis.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="card text-center">
+                      <div class="card-body">
+                          <h5 class="card-title">Support Farmers</h5>
+                          <p class="card-text">Ensure a stable market for farmers' produce by procuring food grains at Minimum Support Prices (MSP).</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Image Grid Section -->
+  <section class="bg-light py-5">
+      <div class="container">
+          <h2 class="text-center mb-4">Our Work in Pictures</h2>
+          <div class="row">
+              <div class="col-md-4 mb-4">
+                  <img src="images/pds1.jpg" class="img-fluid rounded" alt="PDS Image 1">
+              </div>
+              <div class="col-md-4 mb-4">
+                  <img src="images/pds2.jpg" class="img-fluid rounded" alt="PDS Image 2">
+              </div>
+              <div class="col-md-4 mb-4">
+                  <img src="images/pds3.jpg" class="img-fluid rounded" alt="PDS Image 3">
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-5">
+      <div class="container">
+          <h2 class="text-center mb-4">Contact Us</h2>
+          <p class="text-center">For more information about the Public Distribution System, please reach out to us at:</p>
+          <p class="text-center"><strong>Email:</strong> contact@pds.gov.in</p>
+          <p class="text-center"><strong>Phone:</strong> +91-123-456-7890</p>
+      </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white text-center py-3">
+      <p class="mb-0">&copy; 2024 Public Distribution System. All Rights Reserved.</p>
+  </footer>
+
+<script src="./js/script.js"></script>
+
+</body>
+</html>
